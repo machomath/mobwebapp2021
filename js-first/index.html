@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1 id="main-heading">Let's learn JS</h1>
+
+  </body>
+  <script type="text/javascript">
+    var x = document.getElementById("main-heading");
+    var st = "Hello to the world of JS";
+    setInterval(function() {
+      var tmp = x.innerHTML;
+      x.innerHTML = st;
+      st = tmp;
+    } ,3000);
+    /*
+    setTimeout(function() {
+      x.innerHTML = "Hello to the world of JS";
+    }, 3000);
+    */
+    // console.log(x);
+    // console.log(x.innerHTML);
+  </script>
+</html>

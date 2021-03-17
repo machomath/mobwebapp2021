@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@font-face {
+  font-family: 'Oi';
+  src: url(./Oi/Oi-Regular.ttf);
+}
+h1{
+  /* font-style: italic; */
+  font-family: Helvetica, Georgia, sans-serif, serif;
+  font-family: 'Ballet', cursive;
+}
+p{
+  font-family: 'Dancing Script', cursive;
+}
+
+li{
+  font-family: 'Oi';
+}

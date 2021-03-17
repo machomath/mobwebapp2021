@@ -1,0 +1,38 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+div{
+  /* border: 1px solid black; */
+}
+
+p{
+  margin: 0;
+}
+
+.grid-container{
+  background: pink;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.item-1{
+  order: 1;
+}
+.item-8{
+  order: 10;
+}
+.item-4{
+  order: 5;
+}
+.item-u{
+  background: skyblue;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  /* grid-column: 2/4; */
+  grid-row: 2;
+
+}

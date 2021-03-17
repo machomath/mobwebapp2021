@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./css/master.css">
+  </head>
+  <body>
+    <h1>Knowing Grid</h1>
+
+    <div class="grid-container">
+
+      <div class="item item-1">
+        <p>This is item 1</p>
+      </div>
+
+      <div class="item item-2">
+        <p>This is item 2</p>
+      </div>
+
+      <div class="item item-3">
+        <p>This is item 3</p>
+      </div>
+
+      <div class="item item-4">
+        <p>This is item 4</p>
+      </div>
+
+      <div class="item item-5">
+        <p>This is item 5</p>
+      </div>
+
+      <div class="item item-6">
+        <p>This is item 6</p>
+      </div>
+      <div class="item item-7">
+        <p>This is item 7</p>
+      </div>
+
+      <div class="item item-8">
+        <p>This is item 8</p>
+      </div>
+
+      <div class="item item-9">
+        <p>This is item 9</p>
+      </div>
+      <div class="item item-10">
+        <p>This is item 10</p>
+      </div>
+
+      <div class="item item-11">
+        <p>This is item 11</p>
+      </div>
+
+      <div class="item item-12">
+        <p>This is item 12</p>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <div class="grid-container">
+
+      <div class="item-u">
+        <p>This is item u</p>
+      </div>
+
+
+
+    </div>
+
+  </body>
+  <script type="text/javascript">
+    function findInv(b){
+        let stk1 = [];
+        let stk2 = [0,1];
+        let a = 23;//N;
+        let N = a;
+        let r;
+        let q;
+        while(b > 1){
+            r = a%b;
+            q = (a-r)/b;
+            stk1.push(-q);
+            a = b;
+            b = r;
+        }
+        console.log(stk1);
+        while(stk1.length > 0){
+            stk2.push((stk2[stk2.length-2] + (stk2[stk2.length-1]*(stk1.pop()))));
+
+            // stk.push((N+stk2[stk2.length-2] + (stk2[stk2.length-1]*(N+stk1.pop()))%N)%N);
+        }
+        console.log(stk2);
+        return (stk2[stk2.length-1]+N)%N;
+    }
+    console.log(findInv(16));
+  </script>
+</html>

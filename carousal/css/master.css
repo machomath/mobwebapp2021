@@ -1,0 +1,34 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container{
+  border: 5px solid red;
+  padding: 10px;
+}
+
+.img-container{
+  position: relative;
+}
+
+.img-container img{
+  width: 100%;
+}
+
+.img-container button{
+  width: 4vw;
+  height: 8vw;
+  position: absolute;
+  bottom: calc(50% - 4vw);
+}
+.left-button{
+  left: 0;
+
+}
+
+.right-button{
+  right: 0;
+}

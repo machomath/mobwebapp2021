@@ -1,0 +1,141 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+  background-color: #EEE;
+}
+
+nav{
+  background: rgba(255, 255, 0, 1);
+  height: 4em;
+}
+
+h1{
+  color: red;
+  /* em, rem, px are various ways to give sizes */
+  font-size: 4em;
+}
+
+a {
+  text-decoration: none;
+}
+
+#this-page{
+  color: red;
+}
+a:hover{
+  font-weight: 700;
+}
+nav{
+  text-align: right;
+  padding-right: 0.5em;
+  padding-top: 0.5em;
+  /* width: 75%; */
+  font-size: 0;
+  height: 4rem;
+}
+
+nav a{
+  /* padding-left: 0.5em; */
+  font-size: 1.5rem;
+  color: blue;
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  border: 1px solid red;
+  /* box-sizing: border-box; */
+  padding: 10px;
+}
+
+.font-bold-blue{
+  font-weight: bold;
+  color: blue;
+}
+
+div>.font-bold-blue{
+  background: pink;
+}
+
+div.skyblue-back{
+  background: skyblue;
+}
+div img{
+  width: 50%;
+}
+ul.selective li:nth-of-type(3n+0){
+  color: blue;
+}
+
+.attrib a[href]{
+  font-weight: bold;
+  color: gold;
+}
+
+.attrib a[for="HTML"]{
+  background: pink;
+}
+
+.change-width{
+  /* display: inline-block;
+  background: blue;
+  width: 25%; */
+}
+.img-div{
+  width: 25%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 5px solid blue;
+  padding: 10px;
+  position: relative;
+}
+.img-div img{
+  width: 100%;
+  border: 5px solid red;
+  /* padding: 10px; */
+  /* border-radius: 50%; */
+  /* border-top-right-radius: 100% */
+  padding: 10px 20px;
+}
+
+.positioned-heading{
+  position: sticky;
+  top: 10px;
+  background: pink;
+  z-index: -1;
+}
+
+.fixed-nav{
+  /* position: fixed;
+  top: 0;
+  width: 100%; */
+}
+
+.img-div button.left-button, .img-div button.right-button{
+  width: 5vw;
+  height: 5vw;
+  position: absolute;
+  top: calc(50% - 2.5vw);
+  /* left: 0; */
+}
+.img-div .down-button{
+  width: 5vw;
+  height: 5vw;
+  position: absolute;
+  bottom: 0;
+  /* width: 100%; */
+  left: 0;
+  right: 0;
+
+}
+.img-div button.left-button{
+  left: 0;
+}
+
+.img-div button.right-button{
+  right: 0;
+}

@@ -1,0 +1,25 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.flex-container{
+  background: pink;
+  /* height: 20vw; */
+  /* padding: 5px; */
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.item{
+  background: skyblue;
+  border: 1px solid green;
+  width: 20%;
+  margin: 5px 0 5px 4%;
+  height: 10vw;
+}
