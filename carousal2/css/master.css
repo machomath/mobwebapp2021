@@ -17,7 +17,7 @@ html {
 .img-container img{
   opacity: 1;
   width: 100%;
-  transition: opacity 2s;
+  transition: opacity 0.5s;
 }
 
 .img-container button{

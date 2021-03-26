@@ -4,6 +4,7 @@ var rightButton = document.getElementsByClassName('right-button')[0];
 // var leftButton = buttons[0];
 // var rightButton = buttons[1];
 var carousalImg = document.getElementById("carousal-img");
+var imgContainer = document.querySelector(".img-container");
 // var carousalImg = document.querySelectorAll("");
 //#carousal-img
 //.container img
@@ -12,17 +13,39 @@ var carousalImg = document.getElementById("carousal-img");
 var numberOfIamges = 5;
 
 leftButton.addEventListener("click", function () {
-  carousalImg.style.opacity = "0";
-  carousalImg.addEventListener("transitionend", function transFuns() {
-    carousalImg.removeEventListener("transitionend", transFuns);
-    changeImg(1);
-    carousalImg.style.opacity = "1";
-  });
+  changeWithTransition(1);
 });
 
 rightButton.addEventListener("click", function () {
-  changeImg(-1);
+  changeWithTransition(-1);
 });
+
+var carInt;
+startCarousal();
+
+function startCarousal() {
+  carInt = setInterval(function () {
+    changeWithTransition(1);
+  }, 2000);
+}
+
+imgContainer.addEventListener("mouseover", function () {
+  console.log("Mouseover");
+  clearInterval(carInt);
+});
+
+imgContainer.addEventListener("mouseout", function () {
+  startCarousal();
+});
+
+function changeWithTransition(delta){
+  carousalImg.style.opacity = "0";
+  carousalImg.addEventListener("transitionend", function transFuns() {
+    carousalImg.removeEventListener("transitionend", transFuns);
+    changeImg(delta);
+    carousalImg.style.opacity = "1";
+  });
+}
 
 function changeImg(delta){//delta is either +1 or -1
   var imgSrc = carousalImg.src;
