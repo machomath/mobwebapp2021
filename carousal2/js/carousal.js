@@ -21,11 +21,12 @@ rightButton.addEventListener("click", function () {
 });
 
 var carInt;
+var carousalDirection = 1;
 startCarousal();
 
 function startCarousal() {
   carInt = setInterval(function () {
-    changeWithTransition(1);
+    changeWithTransition(carousalDirection);
   }, 2000);
 }
 
@@ -36,6 +37,11 @@ imgContainer.addEventListener("mouseover", function () {
 
 imgContainer.addEventListener("mouseout", function () {
   startCarousal();
+});
+
+carousalImg.addEventListener("click",function () {
+  carousalDirection = -1*carousalDirection
+  // console.log("Click");
 });
 
 function changeWithTransition(delta){
