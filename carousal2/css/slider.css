@@ -1,0 +1,42 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h1{
+  color: blue;
+}
+
+.outer-container{
+  width: 100%;
+  padding: 10px;
+  border: 2px solid red;
+}
+.img-container{
+  width: 100%;
+  position: relative;
+}
+
+.img-container img.dummy-img{
+  width: 100%;
+  opacity: 0;
+}
+
+.img-container img.slider-img{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.img-container button{
+  height: 8vw;
+  width: 4vw;
+  position: absolute;
+  bottom: calc(50% - 4vw);
+}
+.img-container .right-button{
+  right: 0;
+}
