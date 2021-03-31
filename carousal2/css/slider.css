@@ -17,6 +17,7 @@ h1{
 .img-container{
   width: 100%;
   position: relative;
+  overflow-x: hidden;
 }
 
 .img-container img.dummy-img{
@@ -29,6 +30,8 @@ h1{
   position: absolute;
   left: 0;
   bottom: 0;
+  transition: left 2s;
+  z-index: 10;
 }
 
 .img-container button{
@@ -36,6 +39,7 @@ h1{
   width: 4vw;
   position: absolute;
   bottom: calc(50% - 4vw);
+  z-index: 100;
 }
 .img-container .right-button{
   right: 0;
