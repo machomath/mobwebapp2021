@@ -1,0 +1,55 @@
+/* Box Model Fix */
+/* border and padding are part of box size */
+html{
+  box-sizing: border-box;
+}
+*, *::after, *::before{
+  box-sizing: inherit;
+}
+
+.main-container{
+  border: 2px solid pink;
+  padding: 10px;
+}
+
+.img-container{
+  position: relative;
+  overflow: hidden;
+}
+
+.img-container img{
+  width: 100%;
+  transition: left 0.5s;
+}
+
+.only-images{
+  position: relative;
+}
+
+.dummy-img{
+  opacity: 0;
+}
+
+.my-main-img{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+.button{
+  display: inline-block;
+  width: 5vw;
+  height: 10vw;
+  position: absolute;
+  bottom: calc(50% - 5vw);
+  z-index: 20;
+}
+
+.left-button{
+  left: 0;
+}
+
+.right-button{
+  right: 0;
+}
