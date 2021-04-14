@@ -1,0 +1,28 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+  
+
+h1{
+
+
+    color: blue;
+}
+
+nav{
+    background: skyblue;
+    height: 4vw;
+    padding: 1vw;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 2vw;
+    font-weight: bold;
+    color: white;
+    padding-right: 2vw;
+}
