@@ -7,19 +7,23 @@ app.use(express.static(path.join(__dirname, "public"))); //to define the static 
 app.set("view engine", "ejs");
 
 
-app.use("/about", (req, res, next)=>{
+app.get("/about", (req, res, next)=>{
     res.render("about.ejs", {title: "About Us", page: "about"});
 });
 
-app.use("/me", (req, res, next)=>{
+app.get("/me", (req, res, next)=>{
     res.render("me.ejs", {title: "My Personal Page", page: "me"});
 });
 
-app.use("/contact", (req, res, next)=>{
+app.get("/contact", (req, res, next)=>{
     res.render("contact.ejs",{title: "Contact Us", page: "contact"});
 });
 
-app.use("/", (req, res, next)=>{
+app.get("/home", (req, res, next)=>{
+    res.render("home.ejs", {title: "Home Page", page: "home"});
+});
+
+app.get("/", (req, res, next)=>{
     res.render("home.ejs", {title: "Home Page", page: "home"});
 });
 

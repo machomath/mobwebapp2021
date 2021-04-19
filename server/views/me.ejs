@@ -6,6 +6,12 @@
 <body>
     <%- include("layouts/nav.ejs")%>
     <h1>My Personal Page</h1>
+    <p>Also explore that how can you connect it with MongoDB </p>
+    <form method="POST" action="/me">
+        <input type="text" name="userName" placeholder="User Name"><br>
+        <input type="password" name="password" placeholder="Password"><br>
+        <button type="submit">Send</button>
+    </form>
     
 </body>
 </html>
